@@ -16,9 +16,9 @@ By default, Home Assistant does not read your phone's notifications. You need to
 3. Tap on Manage Sensors.
 4. Scroll down to the Last Notification sensor and enable it.
 5. Your phone will prompt you to grant "Notification Access" to Home Assistant. Allow it.
-6. (Optional but recommended): Under the sensor settings, look for the Allow List and add the app package name for Cibus. This prevents HA from tracking every single notification on your phone and saves battery!
+6. **(Optional but very recommended)**: Under the sensor settings, look for the Allow List and add the app package name for Cibus. This prevents HA from tracking every single notification on your phone and saves battery!
 
-Take note of your new sensor's entity ID (e.g., sensor.sm_s936b_last_notification). You will need this for the automation.
+Take note of your new sensor's entity ID (e.g., sensor.sm_s936b_last_notification). You will need this for the automation. Find it by clicking on 'e' inside HA, and searching for "last_notification".
 
 ## Step 2: Create a Helper Entity to Store the Balance
 You need a place to store your current Cibus balance. You can use either an input_number or a counter helper.
@@ -45,7 +45,7 @@ Now, create the automation that links the notification sensor to your helper, an
 2. Click + Create Automation > Edit in YAML (top right three dots).
 3. Paste the code below.
 
-**Note:** Be sure to change sensor.your_phone_last_notification to your actual sensor's entity ID. The example below uses an input_number. If you chose a counter, see the note at the bottom of the code block.
+**Note:** Be sure to change sensor.your_phone_last_notification to your actual sensor's entity ID, also - change the initial amount each month to your initial amount. The example below uses an input_number. If you chose a counter, see the note at the bottom of the code block.
 
 ```yaml
 alias: Cibus Budget Tracker
@@ -91,7 +91,7 @@ action:
               value: >-
                 {{ (states('input_number.cibus_amount') | float(0)) - (cibus_charge | float(0)) }}
               
-      # Action 2: Reset to 990 on the first day of the month
+      # Action 2: Reset to initial value on the first day of the month
       - conditions:
           - condition: trigger
             id: first_of_month
