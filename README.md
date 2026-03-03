@@ -23,7 +23,7 @@ By default, Home Assistant does not read your phone's notifications. You need to
 3. Tap on Manage Sensors.
 4. Scroll down to the Last Notification sensor and enable it.
 5. Your phone will prompt you to grant "Notification Access" to Home Assistant. Allow it.
-6. **(Optional but very recommended)**: Under the sensor settings, look for the Allow List and add the app package name for Cibus. This prevents HA from tracking every single notification on your phone and saves battery!
+6. **(Optional but very recommended)**: Under the sensor settings, look for the Allow List and add the app package name for Cibus. This prevents HA from tracking every single notification on your phone and saves battery! If you can't find Allow List, go back and enter the last_notification sensor again.
 
 Take note of your new sensor's entity ID (e.g., sensor.sm_s936b_last_notification). You will need this for the automation. Find it by clicking on 'e' inside HA, and searching for "last_notification".
 
