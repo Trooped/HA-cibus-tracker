@@ -36,8 +36,7 @@ You need a place to store your current Cibus balance. You can use either an inpu
 3. Select Number (for input_number) or Counter.
 4. Name it cibus_amount.
 5. Set the maximum value (e.g., 990) and the minimum value to 0.
-
-**Note:** Set the current amount you have in Cibus for accurate tracking, we'll make sure it updates to the correct amount in the start of each month on step 3.
+6. Set the current amount you have by going to Settings > Developer Tools > States > Set State > Choose your new input_number.cibus_amount entity and set the 'state' to the current amount you have in your Cibus.
 
 ## Step 3: Create the Automation
 Now, create the automation that links the notification sensor to your helper, and resets it each month.
@@ -110,7 +109,7 @@ If you opted for a counter helper instead of input_number, change the actions in
 ## Step 4: Test Your Setup
 You can test this without actually ordering food!
 
-1. Go to Developer Tools > States.
+1. Go to Settings > Developer Tools > States.
 2. Find your phone's notification sensor (e.g., sensor.sm_s936b_last_notification).
 3. In the "State" box at the top, paste a fake notification string:
 עבור עסקה במסעדת Wolt - Wolt Gift Card הסיבוס שלך חוייב ב 42 ₪
