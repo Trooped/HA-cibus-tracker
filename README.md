@@ -42,7 +42,7 @@ You need a place to store your current Cibus balance. You can use either an inpu
 2. Click + Create Helper.
 3. Select Number (for input_number) or Counter.
 4. Name it cibus_amount.
-5. Set the maximum value (e.g., 990) and the minimum value to 0.
+5. Set the maximum value you receive in the beginning of each month (e.g., 990) and the minimum value to 0.
 6. Set the current amount you have by going to Settings > Developer Tools > States > Set State > Choose your new input_number.cibus_amount entity and set the 'state' to the current amount you have in your Cibus.
 
 ## Step 3: Create the Automation
