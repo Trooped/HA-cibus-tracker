@@ -3,6 +3,13 @@ Track your Cibus amount using HA, an Android phone, and by following this short 
 
 This project uses the Home Assistant Companion App for Android to read push notifications from your phone whenever Cibus charges you (like for a Wolt order). It automatically extracts the exact amount and deducts it from a monthly budget, automatically resetting on the 1st of every month.
 
+## Table of Contents
+- [Requirements](#requirements)
+- [Step 1: Enable the last_notification Sensor](#step-1-enable-the-last_notification-sensor)
+- [Step 2: Create a Helper Entity to Store the Balance](#step-2-create-a-helper-entity-to-store-the-balance)
+- [Step 3: Create the Automation](#step-3-create-the-automation)
+- [Step 4: Test Your Setup](#step-4-test-your-setup)
+
 ## Requirements
 - Home Assistant (Core)
 - Android Phone with the Home Assistant Companion App installed and connected.
