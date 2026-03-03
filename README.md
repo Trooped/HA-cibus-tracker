@@ -112,8 +112,9 @@ You can test this without actually ordering food!
 1. Go to Settings > Developer Tools > States.
 2. Find your phone's notification sensor (e.g., sensor.sm_s936b_last_notification).
 3. In the "State" box at the top, paste a fake notification string:
+
 עבור עסקה במסעדת Wolt - Wolt Gift Card הסיבוס שלך חוייב ב 42 ₪
 
 4. Click Set State.
 
-Check your cibus_amount helper—it should have automatically dropped by 42!
+Check your cibus_amount helper, it should have automatically dropped by 42!
