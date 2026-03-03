@@ -89,7 +89,8 @@ action:
             target:
               entity_id: input_number.cibus_amount
             data:
-              value: "{{ (states('input_number.cibus_amount') | float(0)) - (cibus_charge | float(0)) }}"
+              value: >-
+                {{ (states('input_number.cibus_amount') | float(0)) - (cibus_charge | float(0)) }}
               
       # Action 2: Reset to 990 on the first day of the month
       - conditions:
