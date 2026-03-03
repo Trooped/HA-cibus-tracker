@@ -32,7 +32,7 @@ You need a place to store your current Cibus balance. You can use either an inpu
 
 **Which one should you choose?**
 
-- input_number (Recommended): Supports decimal points (agurot). Perfect if your charges look like 42.30 ₪.
+- input_number (Recommended): Supports decimal points (אגורות). Perfect if some of your charges look like 42.30 ₪.
 
 - counter: Only supports whole integers (no decimals). If a charge has a decimal, the automation will round it down to the nearest whole number to prevent breaking the counter.
 
