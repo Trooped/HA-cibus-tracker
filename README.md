@@ -139,6 +139,7 @@ The automation calculates your Required Daily Burn by dividing your current bala
 **Dynamic:** If you spend enough at lunch to bring the ratio back under control, the evening notification won't fire.
 
 **Configurable:** You can set your own off days (days you can't use your Cibus) and daily maximum budget, in the variables section in the automation.
+Note that in Jinja2 inside Home Assistant: {{ now().weekday() }} (0-6, Mon-Sun). so 4,5 is Friday,Saturday.
 
 It’s a "set it and forget it" tool that only nags you when you literally cannot finish your budget by spending the daily maximum anymore.
 
